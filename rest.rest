@@ -21,6 +21,9 @@ GET http://localhost:3000/post?sender=12345
 PUT http://localhost:3000/post/<post_id>
 Content-Type: application/json
 
+### Get All Comments
+GET http://localhost:3000/comments
+
 {
   "title": "Updated Title",
   "content": "Updated content of the post.",
