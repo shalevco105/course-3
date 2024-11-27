@@ -2,11 +2,14 @@ const express = require("express");
 const mongoose = require("mongoose");
 const bodyParser = require("body-parser");
 const postRoute = require("./routes/postRoute");
+const commentsRouter = require("./routes/commentsRouter");
 
 const app = express();
 app.use(bodyParser.json());
 
 app.use("/post", postRoute);
+
+app.use('/comments', commentsRouter);
 
 mongoose
   .connect("mongodb://localhost:27017/course", {
