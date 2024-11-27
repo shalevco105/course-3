@@ -15,7 +15,7 @@ GET http://localhost:3000/post/data
 GET http://localhost:3000/post/<post_id>
 
 ### Get Posts by Sender
-GET http://localhost:3000/post?sender=12345
+GET http://localhost:3000/post?sender=<sender_id>
 
 ### Update a Post
 PUT http://localhost:3000/post/<post_id>
@@ -25,10 +25,10 @@ Content-Type: application/json
 GET http://localhost:3000/comments
 
 ### Get Comment By Id
-GET http://localhost:3000/comments/673cec0b9c167634f67d1370
+GET http://localhost:3000/comments/<comment_id>
 
 ### Get comments by post_id
-GET http://localhost:3000/comments?post_id=123456
+GET http://localhost:3000/comments?post_id=<post_id>
 
 
 ### Create a comment
