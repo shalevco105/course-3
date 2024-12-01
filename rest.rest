@@ -39,7 +39,7 @@ Content-Type: application/json
 }
 
 ### Update a comment
-PUT http://localhost:3000/comments/673ceb86a97532ab99580992
+PUT http://localhost:3000/comments/<comment_id>
 Content-Type: application/json
 
 {
