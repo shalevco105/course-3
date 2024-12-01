@@ -1,3 +1,4 @@
+const commentModel = require('../models/commentModel');
 const CommentsModel = require('../models/commentModel');
 
 const getAllComments = async (req, res) => {
@@ -22,6 +23,16 @@ const getCommentById = async (req, res) => {
         comment ? res.send(comment) : res.status(404).send('Comments not found');
     } catch (error) {
         res.status(400).send(error.message);
+    }
+};
+
+const getCommetnsByPostId = async (req, res) => {
+    try {
+        const postId = req.query.post_id;
+        const posts = await commentModel.find({ post_id: postId });
+        res.status(200).json(posts);
+    } catch (err) {
+        res.status(500).json({ error: err.message });
     }
 };
 
@@ -56,4 +67,4 @@ const updateComment = async (req, res) => {
     }
 };
 
-module.exports = { getAllComments, getCommentById, createComment, updateComment };
+module.exports = { getAllComments, getCommentById, getCommetnsByPostId, createComment, updateComment };
