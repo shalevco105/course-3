@@ -22,7 +22,7 @@ PUT http://localhost:3000/post/<post_id>
 Content-Type: application/json
 
 ### Get All Comments
-GET http://localhost:3000/comments
+GET http://localhost:3000/comments/data
 
 ### Get Comment By Id
 GET http://localhost:3000/comments/<comment_id>
